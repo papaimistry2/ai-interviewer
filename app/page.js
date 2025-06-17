@@ -63,7 +63,7 @@ export default function Home() {
       <section className="py-16 bg-blue-600 text-white text-center px-6">
         <h2 className="text-3xl font-bold mb-4">Streamline Your Interview Process</h2>
         <p className="mb-6 text-lg">Let AI help you find the best talent — faster and smarter.</p>
-        <Button onClick={goLogin} className="bg-white text-blue-600 hover:bg-gray-100">Get Started Free</Button>
+        <Button onClick={goLogin} className="bg-white text-blue-600 hover:bg-gray-100">Get Started</Button>
       </section>
     </div>
   );
