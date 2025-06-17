@@ -11,13 +11,14 @@ function Login() {
 
 
   const signInWithGoogle = async () => {
+    const url = process.env.NEXT_PUBLIC_HOST_URL ;
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
         queryParams: {
           prompt: 'select_account' // forces Google to show account chooser
         },
-        redirectTo: `${location.origin}/dashboard` // optional, your post-login redirect
+        redirectTo: `${url}/dashboard` // optional, your post-login redirect
       }
     });
 

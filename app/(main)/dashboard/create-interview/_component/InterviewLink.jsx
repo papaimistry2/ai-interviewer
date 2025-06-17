@@ -8,7 +8,7 @@ import { toast } from "sonner";
 
 function InterviewLink({ interview_id, formData }) {
   const GetInterviewUrl = () => {
-    const url = process.env.NEXT_PUBLIC_HOST_URL + '/' + interview_id;
+    const url = process.env.NEXT_PUBLIC_HOST_URL + '/interview/' + interview_id;
     if (!process.env.NEXT_PUBLIC_HOST_URL) {
       throw new Error("Host URL is not defined in environment variables.");
     }
