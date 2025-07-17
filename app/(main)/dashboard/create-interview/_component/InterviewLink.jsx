@@ -55,7 +55,7 @@ function InterviewLink({ interview_id, formData }) {
         </div>
       </div>
       <div className="mt-7 bg-white p-5 rounded-lg w-full">
-        <h2 className="font-bold">Share Via</h2>
+        <h2 className="font-bold">Share</h2>
         <div className="flex gap-7 mt-2 justify-around items-center">
           <Button variant={'outline'} className={'bg-white '}><Mail />Email</Button>
           <Button variant={'outline'} className={'bg-white '}><Mail />Whatsapp</Button>
