@@ -11,21 +11,20 @@ function Login() {
 
 
   const signInWithGoogle = async () => {
-    const url = process.env.NEXT_PUBLIC_HOST_URL ;
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        queryParams: {
-          prompt: 'select_account' // forces Google to show account chooser
-        },
-        redirectTo: `${url}/dashboard` // optional, your post-login redirect
-      }
-    });
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: 'google',
+    options: {
+      queryParams: {
+        prompt: 'select_account',
+      },
+      redirectTo: `${window.location.origin}/dashboard`, // Works on localhost & production
+    },
+  });
 
-    if (error) {
-      console.error("OAuth error:", error.message);
-    }
-  };
+  if (error) {
+    console.error('Error signing in with Google:', error.message);
+  }
+};
 
 
 
@@ -48,7 +47,7 @@ function Login() {
             height={400}
             className="w-[400px] h-[250px] rounded-2xl"
           />
-          <h2 className="text-2xl font-bold text-center">Welcome To Ai-Interviewer</h2>
+          <h2 className="text-2xl font-bold text-center">Welcome To Papai-Interviewer</h2>
           <p className="text-gray-500 text-center">Sign In With Google Authentication</p>
           <Button className="mt-5 w-full"
             onClick={signInWithGoogle}
